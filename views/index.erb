@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>La abuela sorda</title>
 </head>
 <body>
-    <h1>Mi cuenta es: <%= @count %></h1>
-    <button><a href="/">¡Sumar!</a></button>
-    <!-- <form action="/" method="POST">
-        <input type="submit" value="¡Sumar!">
-    </form> -->
+	<h1>La abuela sorda</h1>
+	<form action="/enviar-mensaje" method="POST">
+		<label>Di algo abuelita:</label><br>
+		<input type="text" name="mensaje">
+		<input type="submit" value="¡Dilo!">
+	</form>
 </body>
 </html>
