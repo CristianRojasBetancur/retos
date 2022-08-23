@@ -5,7 +5,7 @@ get '/' do
 	erb :index
 end
 
-post '/enviar-mensaje' do
+post '/abuela' do
 
 	if params[:mensaje] == params[:mensaje].upcase
 		@mensaje = "Ahhh si, manzanas!"
@@ -13,10 +13,7 @@ post '/enviar-mensaje' do
 		@mensaje = "Habla más duro mijito"
 	end
 
-	redirect "/abuela/?mensaje=#{@mensaje}"
+  erb :mensaje
+	#redirect "/abuela/?mensaje=#{@mensaje}"
 end
 
-get '/abuela/' do
-	@mensaje = params[:mensaje]
-	erb :mensaje
-end
