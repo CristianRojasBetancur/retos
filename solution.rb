@@ -9,7 +9,6 @@ get '/' do
 end
 
 post '/' do
-  puts count
   count += 1
   redirect '/'
 end
