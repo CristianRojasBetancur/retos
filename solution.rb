@@ -5,7 +5,7 @@ get '/' do
   erb :index
 end
 
-post '/enviar-mensaje' do
+post '/abuela' do
 
   if params[:mensaje] == params[:mensaje].upcase
     @mensaje = "Ahhh si, manzanas!"
