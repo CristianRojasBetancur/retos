@@ -1,23 +1,15 @@
 require 'sinatra'
-# require 'sinatra/reloader' if development?
+require 'sinatra/reloader' if development?
+
+count = 0
 
 get '/' do
+  @count = count
   erb :index
 end
 
-post '/abuela' do
-
-  if params[:mensaje] == params[:mensaje].upcase
-    @mensaje = 'Ahhh si, manzanas!'
-  else
-    @mensaje = 'Habla mas duro mijito'
-  end
-
-  redirect "/abuela/?mensaje=#{@mensaje}"
+post '/' do
+  puts count
+  count += 1
+  redirect '/'
 end
-
-get '/abuela/' do
-  @mensaje = params[:mensaje]
-  erb :mensaje
-end
-
