@@ -13,7 +13,8 @@ post '/abuela' do
 		@mensaje = "Habla más duro mijito"
 	end
 
-  erb :mensaje
-	#redirect "/abuela/?mensaje=#{@mensaje}"
+  <<-HTML
+    <h1> #{@mensaje}</h1>
+  HTML
 end
 
