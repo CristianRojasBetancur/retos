@@ -8,9 +8,9 @@ end
 post '/abuela' do
 
   if params[:mensaje] == params[:mensaje].upcase
-    @mensaje = "Ahhh si, manzanas!"
+    @mensaje = 'Ahhh si, manzanas!'
   else
-    @mensaje = "Habla más duro mijito"
+    @mensaje = 'Habla más duro mijito'
   end
 
   redirect "/abuela/?mensaje=#{@mensaje}"
