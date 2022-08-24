@@ -1,9 +1,6 @@
 require 'sinatra'
-
-count = 0
+require 'sinatra/reloader' if development?
 
 get '/' do
-  @header = request.env["HTTP_SEC_CH_UA"].split(";")[0].delete("\"")
-  
-  erb :index
+	request.env.has_key?("permiso") ? "Si lo logramos!" : "Sin permiso"
 end
